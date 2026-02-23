@@ -72,7 +72,7 @@ const route=useRouter()
           )}
         </div>
           <Link
-                href={`instructors/${id}`}
+                href={`student/instructors/${id}`}
                 className="text-sm font-medium text-primary hover:underline"
               >
                 More Details

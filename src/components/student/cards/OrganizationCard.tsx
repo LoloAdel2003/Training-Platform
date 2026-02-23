@@ -104,7 +104,7 @@ shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
 
       {/* Action */}
       <Link
-        href={`/organizations/${organization.id}`}
+        href={`student/organizations/${organization.id}`}
         className="text-sm font-medium text-primary hover:underline"
       >
         More Details

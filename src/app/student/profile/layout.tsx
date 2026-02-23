@@ -7,13 +7,13 @@ import { Menu, X, Pencil } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const profileNavItems = [
-  { href: "/profile", label: "Dashboard" },
-  { href: "/profile/learning", label: "My Learning" },
-  { href: "/profile/problems", label: "Problem's Report" },
-  { href: "/profile/saved", label: "Saved" },
-  { href: "/profile/purchases", label: "Purchase History" },
-  { href: "/profile/messages", label: "Message" },
-  { href: "/profile/notifications", label: "Notification" },
+  { href: "student/profile", label: "Dashboard" },
+  { href: "student/profile/learning", label: "My Learning" },
+  { href: "student/profile/problems", label: "Problem's Report" },
+  { href: "student/profile/saved", label: "Saved" },
+  { href: "student/profile/purchases", label: "Purchase History" },
+  { href: "student/profile/messages", label: "Message" },
+  { href: "student/profile/notifications", label: "Notification" },
 ];
 
 const ProfileNavLink = ({ href, label, active }: { href: string; label: string; active: boolean }) => {

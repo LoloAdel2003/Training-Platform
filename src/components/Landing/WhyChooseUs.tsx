@@ -64,7 +64,7 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section id="why-choose-us" className="py-16 bg-background px-4 md:px-10 lg:px-16">
+    <section id="why-choose-us" className="pb-16 bg-background px-4 md:px-10 lg:px-16">
       <div className=" text-center mb-16">
         <Title
           title="Why Choose Our Platform?"

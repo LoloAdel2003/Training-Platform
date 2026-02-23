@@ -153,7 +153,7 @@ const RoadmapCard: React.FC<RoadmapCardProps> = ({
           )}
 
           <Link
-            href={`/roadmaps/${card.id}`}
+            href={`student/roadmaps/${card.id}`}
             className="w-full text-center py-2 rounded-full border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition"
           >
             More Details

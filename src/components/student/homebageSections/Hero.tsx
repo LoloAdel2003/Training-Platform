@@ -50,10 +50,10 @@ const HeroSection: React.FC = () => {
       variant="default"
       size="lg"
       shadow="md"   // تضيف الظل المناسب
-      onClick={() => router.push("/courses")}
+      // onClick={() => router.push("/courses")}
       className="flex items-center gap-2 transition-all"
     >
-      <Link href="/courses" >
+      <Link href="student/courses" >
       Explore Courses
 </Link>
  <ArrowRight size={20} />

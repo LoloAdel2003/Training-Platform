@@ -13,11 +13,8 @@ import {
 } from "../ui/dropdown-menu";
 
 const sections = [
-//   { title: "Home", href: "#hero" },
   { title: "How It Works", href: "#how-it-works" },
   { title: "Features", href: "#features" },
-//   { title: "Courses", href: "#courses" },
-  { title: "Why Choose Us", href: "#why-choose-us" },
   { title: "FAQ", href: "#faq" },
   { title: "Contact", href: "#contact" },
 ];
@@ -48,7 +45,7 @@ const Navbar: React.FC = () => {
           />
         </Link>
       </div>
-<div className="hidden md:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 gap-8">
+<div className="hidden md:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 gap-6 lg:gap-8">
   {sections.map((sec, i) => (
     <a
       key={i}

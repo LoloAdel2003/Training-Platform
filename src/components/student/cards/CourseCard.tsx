@@ -137,7 +137,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ card, showAddToCart = true }) =
   )}
 
           <Link
-            href={`/courses/${card.id}`}
+            href={`student/courses/${card.id}`}
             className="w-full text-center py-2 rounded-full border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition"
           >
             More Details

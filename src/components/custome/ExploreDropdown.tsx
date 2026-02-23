@@ -16,40 +16,40 @@ import {
 import { cn } from "@/lib/utils"
 
 const exploreCategories = [
-  { name: "Frontend Development", link: "/categories/frontend" },
-  { name: "Data Science", link: "/categories/datascience" },
-  { name: "Data Analysis", link: "/categories/dataanalysis" },
-  { name: "Cyber Security", link: "/categories/cybersecurity" },
-  { name: "Fullstack Developer", link: "/categories/fullstack" },
-  { name: "React Development", link: "/categories/react" },
-  { name: "Marketing", link: "/categories/marketing" },
+  { name: "Frontend Development", link: "student/categories/frontend" },
+  { name: "Data Science", link: "student/categories/datascience" },
+  { name: "Data Analysis", link: "student/categories/dataanalysis" },
+  { name: "Cyber Security", link: "student/categories/cybersecurity" },
+  { name: "Fullstack Developer", link: "student/categories/fullstack" },
+  { name: "React Development", link: "student/categories/react" },
+  { name: "Marketing", link: "student/categories/marketing" },
 ];
 
 const availableRoadmap = [
-  { name: "Frontend Developer", link: "/roadmaps/frontend" },
-  { name: "Cyber Security", link: "/roadmaps/cybersecurity" },
-  { name: "Backend", link: "/roadmaps/backend" },
-  { name: "Fullstack", link: "/roadmaps/fullstack" },
-  { name: "Mobile Development", link: "/roadmaps/mobile" },
-  { name: "Data Engineering", link: "/roadmaps/data-engineering" },
-  { name: "DevOps", link: "/roadmaps/devops" },
+  { name: "Frontend Developer", link: "student/roadmaps/frontend" },
+  { name: "Cyber Security", link: "student/roadmaps/cybersecurity" },
+  { name: "Backend", link: "student/roadmaps/backend" },
+  { name: "Fullstack", link: "student/roadmaps/fullstack" },
+  { name: "Mobile Development", link: "student/roadmaps/mobile" },
+  { name: "Data Engineering", link: "student/roadmaps/data-engineering" },
+  { name: "DevOps", link: "student/roadmaps/devops" },
 ];
 
 const ourInstructor = [
-  { name: "Alaa Adel", link: "/instructors/alaa" },
-  { name: "Ahmed Emad", link: "/instructors/ahmed" },
-  { name: "Noor Najar", link: "/instructors/noor" },
+  { name: "Alaa Adel", link: "student/instructors/alaa" },
+  { name: "Ahmed Emad", link: "student/instructors/ahmed" },
+  { name: "Noor Najar", link: "student/instructors/noor" },
 ];
 
 const Blogs = [
-  { name: "The Future of Online Learning", link: "/blogs/future-learning" },
-  { name: "How to Stay Motivated", link: "/blogs/stay-motivated" },
+  { name: "The Future of Online Learning", link: "student/blogs/future-learning" },
+  { name: "How to Stay Motivated", link: "student/blogs/stay-motivated" },
 ];
 
 const Helps = [
-  { name: "FAQ", link: "/FAQ" },
-  { name: "Contact Support", link: "/contact" },
-  { name: "Report a Problem", link: "/report" },
+  { name: "FAQ", link: "student/helps/faq" },
+  { name: "Contact Support", link: "student/helps/contact" },
+  { name: "Report a Problem", link: "student/helps/report" },
 ];
 
 export function ExploreDropdown() {
@@ -93,7 +93,7 @@ export function ExploreDropdown() {
             ))}
           </DropdownMenuGroup>
           <DropdownMenuItem>
-            <Link href="/categories" className="text-blue-600 hover:underline">
+            <Link href="student/categories" className="text-blue-600 hover:underline">
               See More
             </Link>
           </DropdownMenuItem>
@@ -111,7 +111,7 @@ export function ExploreDropdown() {
             ))}
           </DropdownMenuGroup>
           <DropdownMenuItem>
-            <Link href="/roadmaps" className="text-blue-600 hover:underline">
+            <Link href="student/roadmaps" className="text-blue-600 hover:underline">
               See More
             </Link>
           </DropdownMenuItem>
@@ -129,7 +129,7 @@ export function ExploreDropdown() {
             ))}
           </DropdownMenuGroup>
           <DropdownMenuItem>
-            <Link href="/instructors" className="text-blue-600 hover:underline">
+            <Link href="student/instructors" className="text-blue-600 hover:underline">
               See More
             </Link>
           </DropdownMenuItem>
@@ -144,7 +144,7 @@ export function ExploreDropdown() {
             ))}
           </DropdownMenuGroup>
           <DropdownMenuItem>
-            <Link href="/blogs" className="text-blue-600 hover:underline">
+            <Link href="student/blogs" className="text-blue-600 hover:underline">
               See More
             </Link>
           </DropdownMenuItem>
@@ -155,7 +155,7 @@ export function ExploreDropdown() {
           <DropdownMenuLabel>Plan&apos;s Offer</DropdownMenuLabel>
           <DropdownMenuSeparator className="my-1" />
           <DropdownMenuItem>
-            <Link href="/Plans" className="text-blue-600 hover:underline">
+            <Link href="student/Plans" className="text-blue-600 hover:underline">
               See Details
             </Link>
           </DropdownMenuItem>
@@ -170,7 +170,7 @@ export function ExploreDropdown() {
             ))}
           </DropdownMenuGroup>
           <DropdownMenuItem>
-            <Link href="/help" className="text-blue-600 hover:underline">
+            <Link href="student/help" className="text-blue-600 hover:underline">
               See More
             </Link>
           </DropdownMenuItem>

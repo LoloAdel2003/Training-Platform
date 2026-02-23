@@ -1,4 +1,5 @@
  "use client"
+import Contact from '@/components/Landing/Contact'
 import FeaturesSection from '@/components/Landing/FeaturesSection'
 import Footer from '@/components/Landing/Footer'
 import HeroSection from '@/components/Landing/Hero'
@@ -22,6 +23,7 @@ export default function page() {
         <HighlightSection />
 
     <QuestionSection />
+    <Contact />
     {/* <Footer /> */}
 
         </div>

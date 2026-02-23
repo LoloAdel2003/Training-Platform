@@ -23,7 +23,7 @@ const BlogsCard: React.FC<BlogsCardProps> = ({
   onClick,
 }) => {
   return (
-    <Link href={`/blogs/${title.toLowerCase().replace(/\s+/g, "-")}`} className="w-full">
+    <Link href={`student/blogs/${title.toLowerCase().replace(/\s+/g, "-")}`} className="w-full">
     <Card
   onClick={onClick}
   className="group flex flex-col max-w-sm w-full overflow-hidden rounded-xl border bg-card text-card-foreground transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer"

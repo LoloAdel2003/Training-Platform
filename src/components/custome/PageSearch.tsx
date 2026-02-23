@@ -1,170 +1,167 @@
 "use client";
 
-import React, { useState } from "react";
-import { FiSearch, FiSliders } from "react-icons/fi";
+import React from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Menu, Pencil } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
 import {
   Sheet,
   SheetContent,
+  SheetTrigger,
   SheetHeader,
   SheetTitle,
-  SheetTrigger,
-  SheetFooter,
 } from "@/components/ui/sheet";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Badge } from "@/components/ui/badge";
 
-const filters = [
-  {
-    id: "category",
-    title: "Category",
-    options: [
-      { label: "Frontend", count: 350 },
-      { label: "Backend", count: 120 },
-    ],
-  },
-  {
-    id: "level",
-    title: "Level",
-    options: [
-      { label: "Beginner", count: 200 },
-      { label: "Intermediate", count: 70 },
-      { label: "Advanced", count: 50 },
-    ],
-  },
-  {
-    id: "price",
-    title: "Price",
-    options: [
-      { label: "Free", count: 300 },
-      { label: "Paid", count: 4000 },
-    ],
-  },
-  {
-    id: "duration",
-      title: "Duration",
-      options: [
-        { label: "1 - 6 Hours", count: 30 },
-        { label: "7 - 14 Hours", count: 70 },
-        { label: "15 - 20 Hours", count: 50 },
-        { label: "+20 Hours", count: 50 },
-      ],
-    },
-    {
-      id: "rating",
-      title: "Rating",
-      options: [
-        { label: "5 Stars", count: 30 },
-        { label: "4-5 Stars", count: 70 },
-        { label: "3-4 Stars", count: 50 },
-        { label: "2-3 Stars", count: 50 },
-        { label: "1-2 Stars", count: 50 },
-      ],
-    },
+const profileNavItems = [
+  { href: "/student/profile", label: "Dashboard" },
+  { href: "/student/profile/learning", label: "My Learning" },
+  { href: "/student/profile/problems", label: "Problem's Report" },
+  { href: "/student/profile/saved", label: "Saved" },
+  { href: "/student/profile/purchases", label: "Purchase History" },
+  { href: "/student/profile/messages", label: "Message" },
+  { href: "/student/profile/notifications", label: "Notification" },
 ];
 
-const PageSearch = () => {
-  const [selected, setSelected] = useState<string[]>([]);
+const ProfileNavLink = ({
+  href,
+  label,
+  active,
+}: {
+  href: string;
+  label: string;
+  active: boolean;
+}) => {
+  return (
+    <Link
+      href={href}
+      className={`relative px-2 py-4 text-[14px] font-medium transition-colors
+      ${active ? "text-primary font-bold" : "text-card-foreground hover:text-primary"}`}
+    >
+      {label}
+      {active && (
+        <span className="absolute left-0 bottom-0 h-[2px] w-full bg-primary" />
+      )}
+    </Link>
+  );
+};
 
-  const handleToggle = (label: string) => {
-    setSelected((prev) =>
-      prev.includes(label) ? prev.filter((l) => l !== label) : [...prev, label]
-    );
-  };
+const ProfileLayout = ({ children }: { children: React.ReactNode }) => {
+  const pathname = usePathname();
 
   return (
-    <div className="flex items-center gap-3">
-      {/* Search Input Enhanced */}
-      <div className="relative group w-full max-w-sm">
-        <FiSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-primary transition-colors" />
-        <Input
-          placeholder="Search roadmaps..."
-          className="pl-10 bg-card border-soft focus-visible:ring-primary h-10 rounded-full"
-        />
-      </div>
+    <div className="w-full min-h-screen bg-background">
+      {/* Header Background */}
+      <div className="radial-primary-bg h-[100px] md:h-[150px] w-full" />
 
-      {/* Filter Trigger */}
-      <Sheet>
-        <SheetTrigger asChild>
-          <Button variant="outline" size="icon" className="rounded-full relative border-soft hover:bg-muted">
-            <FiSliders className="h-4 h-4" />
-            {selected.length > 0 && (
-              <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] text-white">
-                {selected.length}
-              </span>
-            )}
-          </Button>
-        </SheetTrigger>
+      <div className="mx-auto px-4 md:px-8 lg:px-16 -mt-16 md:-mt-24">
+        <div className="bg-background rounded-xl shadow-md overflow-hidden">
 
-        <SheetContent className="flex flex-col w-full sm:max-w-md bg-app border-l border-soft">
-          <SheetHeader className="pb-4 border-b border-soft">
-            <SheetTitle className="text-xl font-bold flex items-center gap-2">
-              <FiSliders className="text-primary" />
-              Filter Options
-            </SheetTitle>
-          </SheetHeader>
+          {/* Top Section */}
+          <div className="p-4 flex items-center justify-between gap-6">
+            <div className="flex items-center gap-5">
+              <div className="relative">
+                <img
+                  src="/imges/lolo.jpg"
+                  alt="Ahmed Adel"
+                  className="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover border-4 border-white"
+                />
+              </div>
+              <div className="space-y-1">
+                <h2 className="text-lg md:text-xl font-bold text-card-foreground">
+                  Ahmed Adel
+                </h2>
+                <div className="flex items-center gap-2">
+                  <span className="text-sm text-muted-foreground">
+                    Student
+                  </span>
+                  <Link href="/profile/edit" className="text-primary">
+                    <Pencil size={16} strokeWidth={2.5} />
+                  </Link>
+                </div>
+              </div>
+            </div>
 
-          <div className="flex-1 overflow-y-auto no-scrollbar px-2 space-y-2 mt-4">
-            <Accordion type="multiple" defaultValue={["category", "level"]} className="w-full space-y-2">
-              {filters.map((filter) => (
-                <AccordionItem key={filter.id} value={filter.id} className="border-soft">
-                  <AccordionTrigger className="text-sm text-card-background font-semibold hover:no-underline">
-                    {filter.title}
-                  </AccordionTrigger>
-                  <AccordionContent className="pt-1 pb-1 space-y-3">
-                    {filter.options.map((option) => (
-                      <div
-                        key={option.label}
-                        className="flex space-y-2  items-center text-muted-foreground  justify-between group"
+            {/* Desktop Buttons */}
+            <div className="hidden md:flex items-center gap-3">
+              <Button size="sm" className="px-5 font-semibold">
+                Become Instructor
+              </Button>
+              <Button
+                variant="destructive"
+                size="sm"
+                className="px-5 font-semibold flex items-center gap-2"
+              >
+                Log Out →
+              </Button>
+            </div>
+
+            {/* Mobile Sheet Trigger */}
+            <div className="md:hidden">
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button variant="ghost" size="icon">
+                    <Menu size={22} />
+                  </Button>
+                </SheetTrigger>
+
+                <SheetContent side="right" className="w-[280px]">
+                  <SheetHeader>
+                    <SheetTitle>Profile Menu</SheetTitle>
+                  </SheetHeader>
+
+                  <div className="mt-6 flex flex-col gap-4">
+                    {profileNavItems.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className={`text-sm font-medium transition-colors
+                        ${pathname === item.href
+                            ? "text-primary"
+                            : "text-card-foreground hover:text-primary"
+                          }`}
                       >
-                        <div className="flex items-center space-x-3 cursor-pointer" onClick={() => handleToggle(option.label)}>
-                          <Checkbox 
-                            id={option.label} 
-                            checked={selected.includes(option.label)}
-                            className="border-soft data-[state=checked]:bg-primary"
-                          />
-                          <label
-                            htmlFor={option.label}
-                            className="text-sm font-medium leading-none cursor-pointer group-hover:text-primary transition-colors"
-                          >
-                            {option.label}
-                          </label>
-                        </div>
-                        <Badge variant="secondary" className="bg-muted text-muted-foreground text-[10px] font-normal px-1.5 py-0">
-                          {option.count}
-                        </Badge>
-                      </div>
+                        {item.label}
+                      </Link>
                     ))}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+
+                    <div className="pt-6 border-t flex flex-col gap-3">
+                      <Button className="w-full">
+                        Become Instructor
+                      </Button>
+
+                      <Button
+                        variant="destructive"
+                        className="w-full"
+                      >
+                        Log Out
+                      </Button>
+                    </div>
+                  </div>
+                </SheetContent>
+              </Sheet>
+            </div>
           </div>
 
-          <SheetFooter className="pt-6 border-t border-soft gap-3 sm:flex-row">
-           
-            <Button className="flex-1 bg-primary hover:opacity-90">
-             Apply Filters
-            </Button>
-             <Button
-              variant="outline"
-              className="flex-1 hover:bg-destructive/10 hover:text-destructive"
-              onClick={() => setSelected([])}
-            >
-              Reset
-            </Button>
-          </SheetFooter>
-        </SheetContent>
-      </Sheet>
+          {/* Desktop Navigation */}
+          <div className="px-8 border-t border-border hidden md:flex items-center justify-center gap-8">
+            {profileNavItems.map((item) => (
+              <ProfileNavLink
+                key={item.href}
+                href={item.href}
+                label={item.label}
+                active={pathname === item.href}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Dynamic Content */}
+        <main className="mt-8 pb-12">{children}</main>
+      </div>
     </div>
   );
 };
 
-export default PageSearch;
+export default ProfileLayout;

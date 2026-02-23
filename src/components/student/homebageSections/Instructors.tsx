@@ -51,7 +51,7 @@ deciplinary:"React Developer",
                } 
                 
               </div>
-              <LinkButton label="See More" href='/instructors' />
+              <LinkButton label="See More" href='student/instructors' />
         </section>
     )
 }
