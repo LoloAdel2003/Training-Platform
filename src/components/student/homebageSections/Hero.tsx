@@ -53,7 +53,7 @@ const HeroSection: React.FC = () => {
       // onClick={() => router.push("/courses")}
       className="flex items-center gap-2 transition-all"
     >
-      <Link href="student/courses" >
+      <Link href="/student/courses" >
       Explore Courses
 </Link>
  <ArrowRight size={20} />

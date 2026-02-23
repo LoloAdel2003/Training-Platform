@@ -84,7 +84,7 @@ level: "Beginner",
                 )}
                 
               </div>
-              <LinkButton label="See More" href='student/roadmaps' />
+              <LinkButton label="See More" href='/student/roadmaps' />
             </section>
     )
 }

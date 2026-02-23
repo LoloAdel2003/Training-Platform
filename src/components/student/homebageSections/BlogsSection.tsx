@@ -62,7 +62,7 @@ const BlogSection = () => {
           />
         ))}
       </div>
-              <LinkButton label="See More" href='student/blogs' />
+              <LinkButton label="See More" href='/student/blogs' />
        
     </section>
   );

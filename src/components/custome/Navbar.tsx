@@ -123,7 +123,7 @@ const cartCount = useAppSelector(
     <ModeToggle />
 
     {/* Notifications */}
-    <Link href="student/notifications" className="relative">
+    <Link href="/student/notifications" className="relative">
       <IoMdNotificationsOutline className="text-foreground hover:text-primary text-[20px] cursor-pointer transition-colors duration-200" />
        <span className="absolute -top-2 -right-2 w-[18px] h-[18px] rounded-full bg-red-500 text-white text-[11px] flex items-center justify-center font-bold">
       2
@@ -132,7 +132,7 @@ const cartCount = useAppSelector(
 
 
 
-<Link href="student/profile/messages" className="relative">
+<Link href="/student/profile/messages" className="relative">
   <HiOutlineChatBubbleLeftRight className="text-foreground hover:text-primary text-[20px] cursor-pointer transition-colors duration-200" />
 
  
@@ -144,7 +144,7 @@ const cartCount = useAppSelector(
 </Link>
     {/* Cart */}
    {/* Cart */}
-<Link href="student/cart" className="relative">
+<Link href="/student/cart" className="relative">
   <FiShoppingBag className="text-foreground hover:text-primary text-[20px] cursor-pointer transition-colors duration-200" />
 
   {cartCount > 0 && (
@@ -155,7 +155,7 @@ const cartCount = useAppSelector(
 </Link>
 
     {/* Profile */}
-    <Link href="student/profile">
+    <Link href="/student/profile">
       <Avatar className="cursor-pointer w-7 h-7">
         <AvatarImage src="/imges/lolo.jpg" alt="profile" />
         <AvatarFallback>Me</AvatarFallback>
@@ -200,7 +200,7 @@ const cartCount = useAppSelector(
     {/* Mobile Profile */}
     {isSign && (
       <DropdownMenuItem asChild className="flex items-center gap-2">
-        <Link href="student/profile" className="cursor-pointer flex items-center gap-2">
+        <Link href="/student/profile" className="cursor-pointer flex items-center gap-2">
           <FiUser className="text-foreground hover:text-primary" />
           <span>Profile</span>
         </Link>
@@ -233,7 +233,7 @@ const cartCount = useAppSelector(
     {isSign && (
       <>
         <DropdownMenuItem asChild className="flex items-center gap-2">
-          <Link href="student/notifications" className="cursor-pointer flex items-center gap-2">
+          <Link href="/student/notifications" className="cursor-pointer flex items-center gap-2">
             <IoMdNotificationsOutline className="text-foreground hover:text-primary" />
             <span>Notifications</span>
              <span className="ml-auto w-4 h-4 rounded-full bg-red-500 text-white text-[11px] flex items-center justify-center font-bold">
@@ -245,7 +245,7 @@ const cartCount = useAppSelector(
         </DropdownMenuItem>
 
         <DropdownMenuItem asChild className="flex items-center gap-2">
-  <Link href="student/cart" className="relative cursor-pointer flex items-center gap-2">
+  <Link href="/student/cart" className="relative cursor-pointer flex items-center gap-2">
     <FiShoppingBag className="text-foreground hover:text-primary" />
     <span>Cart</span>
 
@@ -258,7 +258,7 @@ const cartCount = useAppSelector(
 </DropdownMenuItem>
 
  <DropdownMenuItem asChild className="flex items-center gap-2">
-  <Link href="student/profile/messages" className="relative cursor-pointer flex items-center gap-2">
+  <Link href="/student/profile/messages" className="relative cursor-pointer flex items-center gap-2">
     <HiOutlineChatBubbleLeftRight className="text-foreground hover:text-primary" />
     <span>Messages</span>
 
