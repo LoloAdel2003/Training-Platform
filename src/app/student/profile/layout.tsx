@@ -13,7 +13,8 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
-
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+// import { SheetTitle } from "@/components/ui/sheet";
 const profileNavItems = [
   { href: "/student/profile", label: "Dashboard" },
   { href: "/student/profile/learning", label: "My Learning" },
@@ -99,48 +100,76 @@ const ProfileLayout = ({ children }: { children: React.ReactNode }) => {
 
             {/* Mobile Sheet Trigger */}
             <div className="md:hidden">
-              <Sheet>
-                <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon">
-                    <Menu size={22} />
-                  </Button>
-                </SheetTrigger>
+             <Sheet>
+  <SheetTrigger asChild>
+    <Button variant="ghost" size="icon" className="rounded-full">
+      <Menu size={22} />
+    </Button>
+  </SheetTrigger>
 
-                <SheetContent side="right" className="w-[280px]">
-                  <SheetHeader>
-                    <SheetTitle>Profile Menu</SheetTitle>
-                  </SheetHeader>
+  <SheetContent
+    side="right"
+    className="w-[320px] p-0 flex flex-col"
+  >
+    <VisuallyHidden>
+    <SheetTitle>Profile Menu</SheetTitle>
+  </VisuallyHidden>
+    {/* Top Gradient Header */}
+    <div className="bg-gradient-to-r from-primary/90 to-primary p-6 text-white">
+      <div className="flex items-center gap-4">
+        <img
+          src="/imges/lolo.jpg"
+          alt="profile"
+          className="w-14 h-14 rounded-full border-2 border-white object-cover"
+        />
+        <div>
+          <h3 className="font-semibold text-base">Ahmed Adel</h3>
+          <p className="text-sm opacity-80">Student</p>
+        </div>
+      </div>
+    </div>
 
-                  <div className="mt-6 flex flex-col gap-4">
-                    {profileNavItems.map((item) => (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className={`text-sm font-medium transition-colors
-                        ${pathname === item.href
-                            ? "text-primary"
-                            : "text-card-foreground hover:text-primary"
-                          }`}
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
+    {/* Navigation Links */}
+    <div className="flex-1 px-6 py-6 flex flex-col gap-2">
+      {profileNavItems.map((item) => {
+        const active = pathname === item.href;
 
-                    <div className="pt-6 border-t flex flex-col gap-3">
-                      <Button className="w-full">
-                        Become Instructor
-                      </Button>
+        return (
+          <Link
+            key={item.href}
+            href={item.href}
+            className={`relative flex items-center justify-between px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200
+            ${
+              active
+                ? "bg-primary/10 text-primary"
+                : "text-muted-foreground hover:bg-muted hover:text-foreground"
+            }`}
+          >
+            {item.label}
 
-                      <Button
-                        variant="destructive"
-                        className="w-full"
-                      >
-                        Log Out
-                      </Button>
-                    </div>
-                  </div>
-                </SheetContent>
-              </Sheet>
+            {active && (
+              <span className="absolute right-3 w-2 h-2 bg-primary rounded-full" />
+            )}
+          </Link>
+        );
+      })}
+    </div>
+
+    {/* Bottom Actions */}
+    <div className="px-6 pb-6 border-t pt-4 flex flex-col gap-3">
+      {/* <Button className="w-full rounded-lg font-semibold">
+        Become Instructor
+      </Button> */}
+
+      <Button
+        variant="destructive"
+        className="w-full rounded-lg font-semibold"
+      >
+        Log Out
+      </Button>
+    </div>
+  </SheetContent>
+</Sheet>
             </div>
           </div>
 

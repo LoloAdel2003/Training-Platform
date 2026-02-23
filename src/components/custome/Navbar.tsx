@@ -68,7 +68,7 @@ const cartCount = useAppSelector(
 
       {/* Left Section: Logo + Explore + Search */}
       <div className="flex cursor-pointer items-center gap-4 md:gap-6 flex-1">
-        <Link href="/">
+        <Link href="/student">
           <Image
             src="/imges/logo 22.png"
             alt="logo"
