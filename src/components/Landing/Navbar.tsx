@@ -13,10 +13,10 @@ import {
 } from "../ui/dropdown-menu";
 
 const sections = [
-  { title: "How It Works", href: "#how-it-works" },
-  { title: "Features", href: "#features" },
-  { title: "FAQ", href: "#faq" },
-  { title: "Contact", href: "#contact" },
+  { title: "How It Works", href: "/#how-it-works" },
+  { title: "Features", href: "/#features" },
+  { title: "FAQ", href: "/#faq" },
+  { title: "Contact", href: "/#contact" },
 ];
 
 const Navbar: React.FC = () => {
