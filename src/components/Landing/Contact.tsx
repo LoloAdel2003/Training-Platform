@@ -13,8 +13,8 @@ export default function Contact() {
     <section id="contact" className="pb-16 bg-background px-4 md:px-10 lg:px-16">
       <div className=" text-center mb-16">
         <Title
-          title="Why Choose Our Platform?"
-          subTitle="Empowering learners, instructors, and organizations with advanced tools and support"
+          title="Get in Touch with Us"
+          subTitle="Whether you’re a student, instructor, or organization, we’re happy to assist you."
         />
       </div>
 <div className="">

@@ -85,7 +85,7 @@ export const RoadmapCard = ({ node }: { node: RoadmapNode }) => {
               asChild
             >
               <Link
-                href={`/courses/${node.id}`}
+                href={`/student/courses/${node.id}`}
                 className="flex items-center justify-center gap-2"
               >
                 Start Learning

@@ -48,8 +48,8 @@ const Blogs = [
 
 const Helps = [
   { name: "FAQ", link: "/student/helps/faq" },
-  { name: "Contact Support", link: "/student/helps/contact" },
-  { name: "Report a Problem", link: "/student/helps/report" },
+  { name: "Contact Support", link: "/student/contact" },
+  { name: "Report a Problem", link: "/student/report" },
 ];
 
 export function ExploreDropdown() {
