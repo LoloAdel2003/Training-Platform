@@ -95,7 +95,7 @@ const recordedCourses: Course[] = [
 
 const RecordedSection = () => {
   return (
-    <section className="pt-[20px] md:pt-[30px] bg-background md:pb-[30px] px-4 md:px-10 lg:px-16">
+    <section className="py-12  py-16 bg-background  px-4 md:px-10 lg:px-16">
       <Title
         title="Popular Recorded Courses"
         subTitle="Explore the most in-demand courses among learners"

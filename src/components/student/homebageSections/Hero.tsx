@@ -18,7 +18,8 @@ const HeroSection: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="text-3xl md:text-5xl px-4 lg:text-6xl font-bold mb-4"
         >
-          Advance Your Future <br className="md:hidden" /> With Modern <br />
+          Master new skills to unlock   your <br className="hidden md:block" /> career potential with <br className="" /> 
+          {/* Advance Your Future <br className="md:hidden" /> With Modern <br /> */}
           <span className="text-primary block md:pt-4">
             EduQuest Platform
           </span>

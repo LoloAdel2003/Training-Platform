@@ -86,7 +86,7 @@ const OrganizationSection = () => {
   ];
 
   return (
-    <section className="bg-background py-16  text-left md:pt-[30px] md:pb-[30px] px-4 md:px-10 lg:px-16">
+    <section className="bg-background  pb-12  md:pb-16  text-leftpx-4 md:px-10 lg:px-16">
       <Title
         title="Learn with Trusted Organizations"
         subTitle="Explore top educational and training partners shaping the future of learning"

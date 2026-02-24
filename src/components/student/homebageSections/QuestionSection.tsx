@@ -44,7 +44,7 @@ const questions = [
 
 const QuestionSection = () => {
   return (
-    <section className="py-16 px-4 md:px-10 lg:px-16 w-full m-auto bg-background">
+    <section className=" pb-12  md:pb-16 px-4 md:px-10 lg:px-16 w-full m-auto bg-background">
       <Title
         title="Frequently Asked Questions"
         subTitle="Find answers to the most common questions about EduQuest courses and platform"

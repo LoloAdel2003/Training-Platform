@@ -93,7 +93,7 @@ const recordedCourses: Course[] = [
 
 const OnSiteSection = () => {
   return (
-    <section className="pt-[40px] bg-background md:pt-[30px] md:pb-[30px] px-4 md:px-10 lg:px-16">
+    <section className="bg-background  pb-12  md:pb-16 px-4 md:px-10 lg:px-16">
  <Title title="Popular On-Site Courses" subTitle="ttend sessions in classrooms, interact directly with instructors" />     
   <CourseSlider courses={recordedCourses} />
     </section>

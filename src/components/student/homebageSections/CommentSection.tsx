@@ -49,7 +49,7 @@ const CommentSection = () => {
   ];
 
   return (
-    <section className="bg-background py-14 px-4 md:px-10 lg:px-16">
+    <section className="bg-background  pb-12  md:pb-16 px-4 md:px-10 lg:px-16">
               <Title title="What Our Learner Says" subTitle="Real stories from learners who transformed their future with EduQuest" />
 
 

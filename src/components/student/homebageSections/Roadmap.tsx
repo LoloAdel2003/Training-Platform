@@ -73,7 +73,7 @@ level: "Beginner",
   ];
     return(
         
-         <section className="py-12 text-center bg-background md:py-16 px-4 md:px-10 lg:px-16">
+         <section className=" pb-12  md:pb-16 text-center bg-background  px-4 md:px-10 lg:px-16">
               <Title title="Complete Learning Paths" subTitle="Follow a structured learning path that combines a series of related courses to develop your skills step by step" />
               <div className='my-10 card-grid'>
                 {Roadmaps.map((roadmap)=>(

@@ -54,10 +54,10 @@ const JourneySection = () => {
       />
 
       {/* الخط العمودي للأرقام */}
-<span className="h-[1550px] hidden md:block w-2.5 absolute left-1/2 top-[186px] -translate-x-1/2 rounded-3xl bg-[var(--primary)]"></span>
+<span className="h-[1550px] hidden md:block w-2.5 top-[300px] absolute left-1/2  -translate-x-1/2 rounded-3xl bg-[var(--primary)]"></span>
 
       {/* الأرقام على الخط */}
-      <div className=" absolute left-1/2 hidden top-[220px] lg:flex flex-col gap-[230px] -translate-x-1/2">
+      <div className=" absolute left-1/2 hidden top-[400px] lg:flex flex-col gap-[230px] -translate-x-1/2">
         {steps.map((_, idx) => (
           <StepNum key={idx} num={idx + 1} />
         ))}

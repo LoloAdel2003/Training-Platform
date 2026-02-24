@@ -41,7 +41,7 @@ deciplinary:"React Developer",
 
 ]
     return(
-        <section className="text-center py-16 bg-background  md:pb-[30px] px-4 md:px-10 lg:px-16">
+        <section className="text-center bg-background  pb-12  md:pb-16 px-4 md:px-10 lg:px-16">
         <Title title="Meet Our Expert Instructor" subTitle="Learn from passionate mentors who turn knowledge into inspiration" />
  <div className='my-10 card-grid'>
                {Instructors.map(instructor=>(

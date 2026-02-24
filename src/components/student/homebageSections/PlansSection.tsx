@@ -1,15 +1,6 @@
 // import React from 'react'
 import PlanCard from '../cards/PlanCard';
 import Title from '../../custome/Title'
-// const PlansSection=()=>{
-//     return (
-//         <>
-        
-//         </>
-//     )
-// }
-// export default PlansSection
-// import PlanCard from "./PlanCard";
 
 const PlansSection = () => {
   const plans = [
@@ -39,7 +30,7 @@ const PlansSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-background px-4 md:px-10 lg:px-16 w-full m-auto">
+    <section className=" pb-12  md:pb-16 bg-background px-4 md:px-10 lg:px-16 w-full m-auto">
               <Title title="Choose Your Perfect Plans" subTitle="Flexible pricing plans designed to fit every learner’s needs and goals" />
 <div className="py-10  flex justify-center items-center gap-8 flex-wrap">
       {plans.map((plan, index) => (

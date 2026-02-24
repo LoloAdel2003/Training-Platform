@@ -1,17 +1,47 @@
 import React from "react";
+import { cn } from "@/lib/utils";
 
 type TitleProps = {
   title: string;
-  subTitle: string;
+  subTitle?: string;
   className?: string;
+  titleClassName?: string;
   subTitleClassName?: string;
 };
 
-const Title: React.FC<TitleProps> = ({ title, subTitle, className ,subTitleClassName}) => {
+const Title: React.FC<TitleProps> = ({
+  title,
+  subTitle,
+  className,
+  titleClassName,
+  subTitleClassName,
+}) => {
   return (
-    <div className={`text-center ${className}`}>
-      <span className={`block text-primary  font-bold text-[20px]  text-xl md:text-3xl lg:text-[35px] ${className}`} >{title}</span>
-      <span className={`block opacity-80 font-light text-[16px] md:text-[18px] ${subTitleClassName}`}>{subTitle}</span>
+    <div className={cn("text-center space-y-3 mb-8 md:mb-12", className)}>
+      
+      {/* Main Title */}
+      <h2
+        className={cn(
+          "font-bold tracking-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl",
+          "text-foreground leading-tight",
+          titleClassName
+        )}
+      >
+        {title}
+      </h2>
+
+      {/* Subtitle */}
+      {subTitle && (
+        <p
+          className={cn(
+            "text-muted-foreground text-sm sm:text-base md:text-lg",
+            "max-w-2xl mx-auto leading-relaxed",
+            subTitleClassName
+          )}
+        >
+          {subTitle}
+        </p>
+      )}
     </div>
   );
 };

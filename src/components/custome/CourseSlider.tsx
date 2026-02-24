@@ -27,7 +27,7 @@ const CourseSlider: React.FC<CourseSliderProps> = ({ courses }) => {
   }, []);
 
   return (
-    <section className="w-full py-6 bg-background">
+    <section className="w-full  bg-background">
       <div className="flex justify-center items-center">
         <Swiper
           modules={[Navigation]}

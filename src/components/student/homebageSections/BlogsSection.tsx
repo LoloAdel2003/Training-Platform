@@ -41,12 +41,11 @@ const blogsData = [
 
 const BlogSection = () => {
   return (
-    <section className="py-16 px-4 md:px-10 text-center lg:px-16 bg-background">
+    <section className="py-12 md:py-16 px-4 md:px-10 text-center lg:px-16 bg-background">
       <Title
         title="Our Latest Blogs & News"
         subTitle="Stay updated with the latest insights, tips, and stories from EduQuest"
-        className="text-gray-900"
-        subTitleClassName="text-gray-600"
+       
       />
 
       {/* Cards Grid */}
