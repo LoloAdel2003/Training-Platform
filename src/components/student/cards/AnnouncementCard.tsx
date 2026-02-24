@@ -26,7 +26,7 @@ const AnnouncementCard: React.FC<{ data: AnnouncementType }> = ({ data }) => {
 
   }
   return (
-    <div className="flex flex-col relative  md:flex-row justify-between items-center gap-5 py-16 px-4 md:px-10 lg:px-16 bg-app">
+    <div className="flex flex-col relative  bg-my-gradient  md:flex-row justify-between items-center gap-5 py-16 px-4 md:px-10 lg:px-16 ">
 
   {/* الصورة */}
   <div className=" w-64 h-64 absolute top-1/2  right-0  opacity-20 md:opacity-100 transform -translate-y-1/2 md:translate-y-0 md:relative md:w-80 md:h-80 shrink-0">

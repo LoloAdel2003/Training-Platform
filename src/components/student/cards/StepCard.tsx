@@ -12,7 +12,7 @@ type StepsCardProps = {
 const StepsCard: React.FC<StepsCardProps> = ({ name, description, className }) => {
   return (
     <Card
-      className={`w-auto shadow-md border border-primary rounded-[15px] text-center px-[25px] py-[15px] ${className}`}
+      className={`w-auto shadow-md border border-primary rounded-[15px] text-center px-[10px] lg:px-[25px] py-[15px] ${className}`}
       style={{
         background: "var(--card)",           // يعتمد على ثيم Light/Dark
         color: "var(--card-foreground)",    // النصوص تعتمد المتغير المناسب

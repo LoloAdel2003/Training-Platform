@@ -69,7 +69,7 @@ const AnnouncementSection = () => {
   // if (!mounted) return null;
 
   return (
-    <section className="w-full bg-background relative py-8">
+    <section className="w-full bg-my-gradient relative py-8">
      
        <Carousel className="w-full" opts={{ loop: false }} setApi={(api) => {
       carouselApiRef.current = api;

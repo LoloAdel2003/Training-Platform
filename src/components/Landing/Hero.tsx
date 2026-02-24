@@ -11,13 +11,13 @@ import { Button } from "../ui/button";
 const HeroSection: React.FC = () => {
   const router = useRouter();
   return (
-    <section className="w-full h-[calc(100vh-64px)] md:h-[calc(100vh-54px)] bg-my-gradient">
+    <section className="w-full h-[calc(100vh-57px)] md:h-[calc(100vh-54px)] bg-my-gradient">
       <div className="flex flex-col gap-2 lg:gap-4 items-center justify-center h-full px-8 text-center">
         <motion.h1
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="text-3xl md:text-5xl px-4 lg:text-6xl font-bold mb-4"
+          className="text-3xl md:text-5xl  lg:text-6xl font-bold mb-4"
         >
           Advance Your Future <br className="md:hidden" /> With Modern <br />
           <span className="text-primary block md:pt-4">
