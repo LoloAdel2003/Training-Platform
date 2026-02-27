@@ -10,7 +10,7 @@ import Link from "next/link";
 const HeroSection: React.FC = () => {
   const router = useRouter();
   return (
-    <section className="w-full h-[calc(100vh-64px)] md:h-[calc(100vh-54px)] bg-my-gradient">
+    <section className="w-full h-[calc(100vh-57.5px)] md:h-[calc(100vh-61px)] bg-my-gradient">
       <div className="flex flex-col gap-2 lg:gap-4 items-center justify-center h-full px-8 text-center">
         <motion.h1
           initial={{ y: -50, opacity: 0 }}

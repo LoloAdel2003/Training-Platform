@@ -10,8 +10,8 @@ const instructorMenu = [
     items: [
       { title: "Dashboard", url: "/organizationInstructor", icon: LayoutDashboard },
        { title: "Courses", url: "/organizationInstructor/courses", icon: BookOpen },
-      { title: "Roadmaps", url: "/organizationInstructor/roadmaps", icon: LayoutDashboard },
-      { title: "Blogs ", url: "/organizationInstructor/blogs", icon: BookOpen },
+      // { title: "Roadmaps", url: "/organizationInstructor/roadmaps", icon: LayoutDashboard },
+      // { title: "Blogs ", url: "/organizationInstructor/blogs", icon: BookOpen },
       { title: "Announcements", url: "/organizationInstructor/announcement", icon: LayoutDashboard },
       { title: "Calender", url: "/organizationInstructor/calender", icon: BookOpen },
        { title: "To Do List", url: "/organizationInstructor/todo", icon: LayoutDashboard },
@@ -26,15 +26,15 @@ const instructorMenu = [
       { title: "Messages", url: "/organizationInstructor/messages", icon: MessageSquare },
     ]
   },
-   {
-    groupLabel: "Actions",
-    items: [
-      { title: "New Course", url: "/organizationInstructor/newcourse", icon: Users },
-      { title: "New Roadmap", url: "/organizationInstructor/newroadmap", icon: MessageSquare },
-       { title: "New Blog", url: "/organizationInstructor/newblog", icon: Users },
-      { title: "New Announcement", url: "/organizationInstructor/newannouncement", icon: MessageSquare },
-    ]
-  },
+  //  {
+  //   groupLabel: "Actions",
+  //   items: [
+  //     // { title: "New Course", url: "/organizationInstructor/newcourse", icon: Users },
+  //     // { title: "New Roadmap", url: "/organizationInstructor/newroadmap", icon: MessageSquare },
+  //     //  { title: "New Blog", url: "/organizationInstructor/newblog", icon: Users },
+  //     // { title: "New Announcement", url: "/organizationInstructor/newannouncement", icon: MessageSquare },
+  //   ]
+  // },
    {
     groupLabel: "Instructor",
     items: [

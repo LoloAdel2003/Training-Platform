@@ -51,9 +51,9 @@ function TabsTrigger({
       className={cn(
         `
 relative inline-flex items-center justify-center
-        px-5 py-2.5
+        px-3 py-2
         cursor-pointer
-        text-sm md:text-base
+        text-sm 
         font-medium
         rounded-lg
         transition-all duration-300
@@ -66,7 +66,7 @@ relative inline-flex items-center justify-center
         data-[state=active]:text-primary
         data-[state=active]:shadow-medium
         data-[state=active]:font-semibold
-        data-[state=active]:scale-[1.02]
+       
 
         focus-visible:outline-none
         focus-visible:ring-2
