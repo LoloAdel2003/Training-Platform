@@ -4,8 +4,8 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Plus, Search } from "lucide-react"
-import { StatCard } from "./StatCard"
-import { ArticleTable } from "./ArticleTable"
+// import { StatCard } from "./StatCard"
+// import { ArticleTable } from "./ArticleTable"
 import Link from "next/link"
 
 import {
@@ -14,8 +14,10 @@ import {
   TabsTrigger,
   TabsContent,
 } from "@/components/ui/tabs"
+import { AnnouncementTable } from "./AnnouncementTable"
+import { StatCard } from "../blog/StatCard"
 
-export default function ArticlesPage() {
+export default function AnnouncementsPage() {
   const [activeTab, setActiveTab] = useState("this-week")
 
   return (
@@ -24,38 +26,27 @@ export default function ArticlesPage() {
       {/* Header + Tabs */}
       <div className="flex justify-between items-center flex-wrap gap-4">
         <div>
-          <h1 className="text-2xl font-bold">Blogs Overview</h1>
+          <h1 className="text-2xl font-bold">Announcements Overview</h1>
         </div>
           <Button variant="default" size="sm" className="w-full md:w-auto">
-          <Link href="newblog" className="flex items-center">
-            <Plus className="w-4 h-4 mr-2" /> New Blog
+          <Link href="newannouncement" className="flex items-center">
+            <Plus className="w-4 h-4 mr-2" /> New Announcement
           </Link>
         </Button>
 
-        {/* <Tabs
-          defaultValue="this-week"
-          value={activeTab}
-          onValueChange={setActiveTab}
-          className="w-auto"
-        >
-          <TabsList className="bg-muted">
-            <TabsTrigger value="this-week">This Week</TabsTrigger>
-            <TabsTrigger value="last-week">Last Week</TabsTrigger>
-            
-          </TabsList>
-        </Tabs> */}
+        
       </div>
 
       {/* Stats Grid - يتغير حسب التاب */}
      
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <StatCard
-              title="Most Popular Article"
+              title="Most Popular Announcement"
               value='"React Performance"'
               subtext="Last 7 days"
             />
             <StatCard
-              title="Total Articles"
+              title="Total Announcements"
               value="400"
               trend="+20%"
               subtext="Last 7 days"
@@ -86,7 +77,7 @@ export default function ArticlesPage() {
           className="w-auto"
         >
           <TabsList className="bg-muted">
-            <TabsTrigger value="this-week">All Blogs (400)</TabsTrigger>
+            <TabsTrigger value="this-week">All (400)</TabsTrigger>
             <TabsTrigger value="last-week">Published(200)</TabsTrigger>
             <TabsTrigger value="last-week">Drafted(200)</TabsTrigger>
             
@@ -97,7 +88,7 @@ export default function ArticlesPage() {
 
 
       {/* Table */}
-      <ArticleTable />
+      <AnnouncementTable />
     </div>
   )
 }

@@ -14,7 +14,7 @@ const ProfilePage = () => {
         <RecentlyVisited />
         <CoursesOverview />
         <RoadmapOverview />
-        {/* <Calendar /> */}
+        <Calendar />
         </div>
   );
 }

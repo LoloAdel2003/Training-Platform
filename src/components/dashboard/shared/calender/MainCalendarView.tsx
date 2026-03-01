@@ -16,8 +16,9 @@ import {
 import { Button } from "@/components/ui/button";
 import { Plus, ExternalLink, Calendar as CalendarIcon, MapPin, Clock } from "lucide-react";
 import { CalendarEvent } from "@/api/type/calendar";
+import { EventItem } from "./EventItem";
 
-export function StudentCalender({ initialEvents }: { initialEvents: CalendarEvent[] }) {
+export function MainCalendarView({ initialEvents }: { initialEvents: CalendarEvent[] }) {
   const [selectedEvent, setSelectedEvent] = useState<CalendarEvent | null>(null);
   const [isSheetOpen, setIsSheetOpen] = useState(false);
 
@@ -27,10 +28,27 @@ export function StudentCalender({ initialEvents }: { initialEvents: CalendarEven
   };
 
   return (
-    <div className="flex flex-col lg:flex-row gap-8 p-6 max-w-7xl mx-auto bg-background min-h-screen">
+    <div className="flex flex-col lg:flex-row gap-8  bg-background min-h-screen">
       
       {/* القائمة الجانبية - Sidebar */}
-     
+      <aside className="w-full lg:w-80 flex flex-col gap-6 border border-border p-4 rounded-[2rem] bg-card shadow-sm">
+        {/* <Button className="w-full justify-start gap-2 h-12 rounded-2xl shadow-md bg-primary hover:opacity-90" size="lg">
+          <Plus className="h-5 w-5" />
+          <span className="font-bold">Add New Event</span>
+        </Button> */}
+
+        <div className="space-y-4 border-border">
+          <h2 className="text-xl font-bold px-2">You are going to</h2>
+          <div className="space-y-1">
+            {initialEvents.slice(0, 4).map((event) => (
+              <EventItem key={event.id} event={event} onClick={handleEventClick} />
+            ))}
+          </div>
+          {/* <Button  className="w-full text-muted-foreground hover:text-primary">
+            See More
+          </Button> */}
+        </div>
+      </aside>
 
       {/* التقويم الرئيسي */}
       <main className="flex-1 bg-card rounded-[2rem] border border-border/40 shadow-medium p-6">
@@ -44,7 +62,7 @@ export function StudentCalender({ initialEvents }: { initialEvents: CalendarEven
 
       {/* نافذة التفاصيل - Detail Sheet */}
      <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
-  <SheetContent className="sm:max-w-md border-l-0 rounded-l-[2.5rem] shadow-2xl p-0 overflow-hidden bg-background">
+  <SheetContent className="sm:max-w-md border-l-0 no-scrollbar rounded-l-[2.5rem] shadow-2xl p-0 overflow-hidden bg-background">
     {selectedEvent && (
       <div className="flex flex-col h-full">
         {/* Header Section with Background Gradient */}
@@ -64,7 +82,7 @@ export function StudentCalender({ initialEvents }: { initialEvents: CalendarEven
           </div>
         </div>
 
-        <div className="px-8 pt-10 pb-6 flex-1 overflow-y-auto">
+        <div className="px-8 pt-10 pb-6 flex-1 overflow-y-auto no-scrollbar">
           {/* Badge Type */}
           <span 
             className="inline-block px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-3"

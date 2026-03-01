@@ -1,7 +1,6 @@
 
 
 import { CalendarEvent } from "@/api/type/calendar";
-import { StudentCalender } from "@/components/custome/EventCalendar";
 import { MainCalendarView } from "@/components/dashboard/shared/calender/MainCalendarView";
 
 const MOCK_EVENTS: CalendarEvent[] = [
@@ -54,7 +53,7 @@ const MOCK_EVENTS: CalendarEvent[] = [
   }
 ];
 
-export default function Calendar() {
+export default function CalendarPage() {
   return (
     <div className="">
       

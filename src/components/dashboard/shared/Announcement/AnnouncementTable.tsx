@@ -3,7 +3,8 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 // import { StatusBadge } from "./status-badge"
 import { Edit2, Trash2, ExternalLink } from "lucide-react"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
-import { StatusBadge } from "./StatusBadge";
+import { StatusBadge } from "../blog/StatusBadge";
+// import { StatusBadge } from 
 
 const DATA = [
   { id: "art12", title: "React Performance", date: "01-01-2025", views: 100, comments: 4, status: "Published" },
@@ -16,7 +17,7 @@ const DATA = [
  
 ];
 
-export function ArticleTable() {
+export function AnnouncementTable() {
   return (
     <div className="rounded-xl border-soft overflow-hidden bg-card">
       <Table>
