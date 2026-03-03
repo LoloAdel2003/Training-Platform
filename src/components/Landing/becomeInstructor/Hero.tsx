@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="w-full h-[calc(100vh-57px)] md:h-[calc(100vh-54px)] bg-my-gradient relative overflow-hidden">
+    <section className="w-full  h-[calc(100vh-57.5px)] md:h-[calc(100vh-61px)]  bg-my-gradient relative overflow-hidden">
       <div className="flex flex-col gap-4 items-center justify-center h-full px-6 text-center">
 
         {/* Main Heading */}

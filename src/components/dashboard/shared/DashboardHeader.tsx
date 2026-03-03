@@ -53,7 +53,7 @@ export function DashboardHeader({ showSearch = true }: DashboardHeaderProps) {
       <div className="flex items-center gap-6">
 
         {showSearch && (
-          <div className="relative hidden md:block w-72">
+          <div className="relative hidden lg:block w-72">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
               placeholder="Search data, users, or reports..."

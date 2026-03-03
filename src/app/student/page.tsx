@@ -1,4 +1,5 @@
  "use client"
+// import AIChat from '@/components/AIChat/AIChat'
  import Title from '@/components/custome/Title'
 import AnnouncementSection from '@/components/student/homebageSections/AnnouncementSection'
 import BlogSection from '@/components/student/homebageSections/BlogsSection'

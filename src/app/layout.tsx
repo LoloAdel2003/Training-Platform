@@ -4,6 +4,7 @@ import "./globals.css";
 import ReduxProvider from "@/store/ReduxProvider";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/providers/ThemeProvide";
+import ChatbaseScript from "@/components/AIChat/ChatbaseScript";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,6 +40,8 @@ export default function RootLayout({
             disableTransitionOnChange>
         <ReduxProvider>
         {children}
+            <ChatbaseScript />   
+
         </ReduxProvider>
 
        <Toaster
@@ -49,6 +52,7 @@ export default function RootLayout({
 />
         </ThemeProvider>
       </body>
+      
     </html>
   );
 }

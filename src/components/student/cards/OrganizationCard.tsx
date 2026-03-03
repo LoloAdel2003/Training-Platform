@@ -42,8 +42,8 @@ const route=useRouter()
 //   route.push(`/organizations/${organization.id}`)
 // }
   return (
-   <Card className="w-[280px] rounded-2xl border bg-card text-card-foreground 
-shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+   <Card  className="group relative bg-card rounded-2xl overflow-hidden shadow-md border border-border/40 transition-all duration-300 max-w-sm w-full cursor-pointer hover:shadow-xl">
+
 
   <CardContent className="p-4 flex flex-col gap-4">
 
