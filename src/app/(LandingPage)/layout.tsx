@@ -1,6 +1,7 @@
 
 // import Footer from "@/components/custome/Footer";
 // import Navbar from "@/components/custome/Navbar";
+import ScrollToTop from "@/components/custome/ScrollToTop";
 import Footer from "@/components/Landing/Footer";
 import Navbar from "@/components/Landing/Navbar";
 import type { Metadata } from "next";
@@ -26,6 +27,8 @@ export default function RootLayout({
       <Navbar />
       <main className="bg-background text-background-foreground  pt-[57px] md:pt-[60px] ">
         {children}
+                <ScrollToTop />
+        
       </main>
       <Footer />
     </>

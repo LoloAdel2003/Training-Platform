@@ -48,7 +48,7 @@ export default function RootLayout({
   position="top-right"
   richColors
   expand
-  duration={1000}
+  duration={1000} 
 />
         </ThemeProvider>
       </body>
