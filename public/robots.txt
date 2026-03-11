@@ -1,0 +1,23 @@
+
+# يسمح لجميع محركات البحث بفهرسة الصفحات العامة
+User-agent: *
+Allow: /
+
+# student pages
+Disallow: /student/profile
+Disallow: /student/profile/edit
+Disallow: /student/profile/learning
+Disallow: /student/profile/messages
+Disallow: /student/profile/notifications
+Disallow: /student/profile/problems
+Disallow: /student/profile/purchases
+Disallow: /student/profile/saved
+Disallow: /student/cart
+Disallow: /student/cart/checkout
+Disallow: /student/notifications
+
+
+# Dashboard pages
+
+# رابط الـ sitemap لمساعدة محركات البحث في اكتشاف كل الصفحات المهمة
+Sitemap: https://training-platform-bay.vercel.app/sitemap.xml

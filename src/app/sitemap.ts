@@ -14,6 +14,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${basestudentUrl}`,
       priority: 0.9,
     },
+     {
+      url: `${baseUrl}/becomeInstructor`,
+      priority: 0.9,
+    },
 
     {
       url: `${basestudentUrl}/roadmaps`,
@@ -22,7 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     {
       url: `${basestudentUrl}/courses`,
-      priority: 0.7,
+      priority: 0.8,
     },
 
     {
@@ -32,15 +36,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     {
       url: `${basestudentUrl}/categories`,
-      priority: 0.6,
+      priority: 0.7,
     }
     , {
       url: `${basestudentUrl}/contact`,
-      priority: 0.5,
     }
      , {
       url: `${basestudentUrl}/report`,
-      priority: 0.5,
     }
      , {
       url: `${basestudentUrl}/instructors`,
@@ -50,14 +52,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${basestudentUrl}/organizations`,
       priority: 0.5,
     }
-     , {
-      url: `${basestudentUrl}/cart`,
-      priority: 0.5,
-    }
-     , {
-      url: `${basestudentUrl}/cart/checkout`,
-      priority: 0.5,
-    }
-
+    
   ];
 }

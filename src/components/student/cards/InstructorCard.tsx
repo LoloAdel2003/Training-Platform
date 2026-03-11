@@ -30,7 +30,7 @@ const InstructorCard: React.FC<InstructorCardProps> = ({ card }) => {
   } = card;
 const route=useRouter()
   const handleClick=()=>{
-    route.push(`/profile/messages`)
+    route.push(`student/profile/messages`)
   }
 
   return (
