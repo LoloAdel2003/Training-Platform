@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   creator: "EduQuest",
   publisher: "EduQuest",
 
-  // metadataBase: new URL("https://eduquest.com"),
+  metadataBase: new URL("https://training-platform-bay.vercel.app"),
 
   icons: {
     icon: "/imges/logo2.png",
