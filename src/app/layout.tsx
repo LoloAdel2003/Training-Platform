@@ -57,24 +57,23 @@ export const metadata: Metadata = {
     icon: "/imges/logo2.png",
   },
 
-  openGraph: {
-    title: "EduQuest - Your Gateway to Knowledge",
-    description:
-      "Explore courses, follow roadmaps, track your learning progress, and earn certifications with EduQuest.",
-    url: "https://training-platform-bay.vercel.app",
-    siteName: "EduQuest",
-    images: [
-      {
-        url: "/imges/EduQuestOpenGraph.png",
-        width: 1200,
-        height: 630,
-        alt: "EduQuest Learning Platform",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-
+ openGraph: {
+  title: "EduQuest - Your Gateway to Knowledge",
+  description:
+    "Explore courses, follow structured roadmaps, track your learning progress, and earn certifications with EduQuest.",
+  url: "https://training-platform-bay.vercel.app",
+  siteName: "EduQuest",
+  images: [
+    {
+      url: "https://training-platform-bay.vercel.app/imges/EduQuestOpenGraph.png",
+      width: 1200,
+      height: 630,
+      alt: "EduQuest Learning Platform",
+    },
+  ],
+  locale: "en_US",
+  type: "website",
+},
   twitter: {
     card: "summary_large_image",
     title: "EduQuest - Your Gateway to Knowledge",
