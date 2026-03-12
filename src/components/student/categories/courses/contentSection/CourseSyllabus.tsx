@@ -81,11 +81,11 @@ export const CourseSyllabus = () => {
   const getHref = (type: SyllabusContent["type"], id: string) => {
     switch (type) {
       case "lecture":
-        return `/courses/${courseId}/lectures/${id}`;
+        return `/student/courses/${courseId}/lectures/${id}`;
       case "quiz":
-        return `/courses/${courseId}/quizzes/${id}`;
+        return `/student/courses/${courseId}/quizzes/${id}`;
       case "assignment":
-        return `/courses/${courseId}/assignments/${id}`;
+        return `/student/courses/${courseId}/assignments/${id}`;
       default:
         return "#";
     }

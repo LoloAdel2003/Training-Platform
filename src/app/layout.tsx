@@ -28,11 +28,7 @@ export const metadata: Metadata = {
     "EduQuest is an online learning platform where you can explore courses, follow structured roadmaps, track your progress, and earn certifications to advance your career.",
 
   keywords: [
-    "online courses",
-    "recorded courses",
-    "live courses",
-    "learning platform",
-    "programming courses",
+    "online courses","recorded courses", "live courses","learning platform",  "programming courses",
     "web development",
     "education platform",
     "online certifications",
@@ -43,6 +39,8 @@ export const metadata: Metadata = {
     "track learning progress",
     "earn certifications",
    "learning analytics",
+   "become instructor",
+   "student"
 
 
   ],
