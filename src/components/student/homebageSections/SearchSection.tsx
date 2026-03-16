@@ -45,7 +45,7 @@ const SearchSection: React.FC = () => {
 
   const handleSearch = useCallback(() => {
     console.log("Search with:", filters);
-    route.push(`categories/${filters.category.toLowerCase()}`);
+    route.push(`student/categories/${filters.category.toLowerCase()}`);
   }, [filters]);
 
   return (

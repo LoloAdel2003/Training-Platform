@@ -16,7 +16,7 @@ const CartPage = () => {
   const totalPrice = useAppSelector((state) => state.cart.totalPrice);
   const dispatch = useAppDispatch();
   const handleCheckout=()=>{
-    route.push("/cart/checkout")
+    route.push("student/cart/checkout")
   }
 
   return (

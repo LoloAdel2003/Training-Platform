@@ -10,6 +10,7 @@ export const AssignmentView = ({ assignment, submission }: { assignment: Assignm
     <div className=" space-y-8 animate-in fade-in duration-500">
       {/* Header Section */}
       <section className="rounded-2xl bg-card shadow-medium rounded-radius-lg p-6 border border-border">
+
         <h2 className="text-primary font-bold text-xl mb-6 border-b pb-2 inline-block">
           {assignment.title}
         </h2>
